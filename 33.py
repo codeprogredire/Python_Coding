@@ -1,6 +1,6 @@
 '''
-
-Leetcode weekly 184
+Leetcode weekly Contest 184
+Link : https://leetcode.com/contest/weekly-contest-184/problems/queries-on-a-permutation-with-key/
 '''
 
 def processQueries(queries,m):
