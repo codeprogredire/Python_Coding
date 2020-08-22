@@ -34,19 +34,13 @@ def solve(nums,n):
             if leftSum==part:
                 left.append(i)
             if rightSum==part:
-                right.append(idx-1)
-        
-
-        right.reverse()
-
-        print('left: {}'.format(left))
-        print('right: {}'.format(right))
+                right=[idx-1]+right
 
         count=0
 
         for target in left:
             idx=find(right,target)
-            print('left element: {}, index: {}'.format(target,idx))
+
             if idx==len(right)-1 and right[idx]<=target:
                 count+=0
             else:
@@ -54,8 +48,6 @@ def solve(nums,n):
                 
         return count
             
-            
-while True:
-    nums=list(map(int,input().split()))
-    n=int(input())
-    print(solve(nums,n))
+nums=list(map(int,input().split()))
+n=int(input())
+print(solve(nums,n))
